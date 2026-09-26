@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikas Stationery Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand"><span>✏️</span><div><h1>Vikas Stationery</h1><small>Your Everyday Stationery Store</small></div></div>
+  <div class="header-actions">
+    <button id="cartBtn" class="cart-btn">🛒 Cart <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="tag">QUALITY • AFFORDABLE • FAST</p>
+    <h2>Everything You Need for<br><span>Study & Creativity</span></h2>
+    <p>Shop notebooks, pens, pencils, art supplies and more.</p>
+    <a href="#products" class="primary">Shop Now</a>
+  </div>
+  <div class="hero-art">📚<span>✏️</span>🖊️</div>
+</section>
+
+<section class="toolbar" id="products">
+  <div class="categories">
+    <button class="cat active" data-cat="All">All</button>
+    <button class="cat" data-cat="Writing">Writing</button>
+    <button class="cat" data-cat="Notebooks">Notebooks</button>
+    <button class="cat" data-cat="Art">Art</button>
+    <button class="cat" data-cat="Office">Office</button>
+  </div>
+  <input id="search" type="search" placeholder="🔍 Search stationery...">
+</section>
+
+<main class="grid" id="productGrid"></main>
+
+<section class="why">
+  <h2>Why Shop With Us?</h2>
+  <div class="why-grid">
+    <div>🚚<h3>Fast Delivery</h3><p>Quick local delivery support.</p></div>
+    <div>💰<h3>Good Prices</h3><p>Quality products at fair prices.</p></div>
+    <div>✅<h3>Quality Products</h3><p>Selected everyday essentials.</p></div>
+    <div>📲<h3>Easy Ordering</h3><p>Order through the website or WhatsApp.</p></div>
+  </div>
+</section>
+
+<footer>
+  <strong>Vikas Stationery Shop</strong><br>
+  © 2026 All Rights Reserved • Developed by Vikas Yadav
+</footer>
+
+<div id="overlay" class="overlay hidden"></div>
+<aside id="cartPanel" class="cart-panel">
+  <div class="cart-head"><h2>Your Cart</h2><button id="closeCart">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+  <button id="checkoutBtn" class="primary full">Proceed to Order</button>
+</aside>
+
+<div id="checkoutModal" class="modal hidden">
+  <div class="modal-box">
+    <button id="closeModal" class="close">✕</button>
+    <h2>Place Your Order</h2>
+    <p id="orderSummary"></p>
+    <form id="orderForm">
+      <input required id="name" placeholder="Full Name">
+      <input required id="phone" pattern="[0-9]{10}" placeholder="10-digit Mobile Number">
+      <textarea required id="address" placeholder="Delivery Address"></textarea>
+      <select id="payment">
+        <option>Cash on Delivery</option>
+        <option>UPI / Online Payment (contact shop)</option>
+      </select>
+      <button class="primary full" type="submit">Confirm Order</button>
+    </form>
+    <div id="success" class="success hidden"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
