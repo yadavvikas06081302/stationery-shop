@@ -1,4 +1,4 @@
-# Vikas Stationery Shop
+# Ajay Stationery Shop
 
 A responsive stationery shopping website built with HTML, CSS and JavaScript.
 
